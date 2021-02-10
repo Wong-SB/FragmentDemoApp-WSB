@@ -1,6 +1,8 @@
 package com.example.fragmentdemo
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +18,13 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
 
+        val btnAbout = findViewById<Button>(R.id.btnAbout)
+
+        btnAbout.setOnClickListener(){
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+
+        }
 
     }
 }
